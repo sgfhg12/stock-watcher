@@ -1,19 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleWare from 'redux-thunk'; 
-import stock from './redux/stock.js';
+import stocks from './redux/stock.js';
 import { composeWithDevTools} from 'redux-devtools-extension';
 
-const state = {
-    stock: [],
-};
 
 const reducer = combineReducers({
-    stock,
+    stocks,
 });
 
 const store = createStore(
-    reducer, 
-    state, 
+    reducer,
     composeWithDevTools(applyMiddleware(thunkMiddleWare)),
 );
 
