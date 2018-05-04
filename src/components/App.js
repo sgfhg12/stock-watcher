@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Chart from '../charts/Chart';
+import Chart from '../components/charts/Chart';
+import SideBar from '../components/SideBar';
 
 class App extends Component {
     constructor(){
@@ -7,7 +8,7 @@ class App extends Component {
     }
     render(){
         return (
-        <Chart/>
+        <SideBar/>
         )
     }
 }
