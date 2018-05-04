@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getStock } from "../redux/stock";
-import "./SideRender.css";
+import { getStock } from "../../redux/stock";
+
 
 export class InputBar extends React.Component {
   constructor(props) {
