@@ -14,9 +14,11 @@ export default function reducer(stocks = [], action) {
 }
 
 export const getStock = stockCode => dispatch => {
-  axios
+
+  return axios
     .get(
-      `https://www.quandl.com/api/v3/datasets/WIKI/${stockCode}.json?api_key=HCAhU5MKxvgcuHrVgvtj`
+        `https://www.quandl.com/api/v3/datasets/WIKI/${stockCode}.json?api_key=${process
+        .env.REACT_APP_QUANDL_KEY}`
     )
     .then(res => {
       dispatch(addStock(res.data));
