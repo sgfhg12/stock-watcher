@@ -26,7 +26,6 @@ export class StockCard extends React.Component {
 const mapDispatchToProps = dispatch => ({
   deleteStock: (evt, stockCode) => {
     evt.preventDefault();
-    console.log('poop')
     return dispatch(removeStock(stockCode));
   }
 });
