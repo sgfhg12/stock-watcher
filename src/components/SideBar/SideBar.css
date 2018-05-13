@@ -1,42 +1,67 @@
-@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+@import url("https://fonts.googleapis.com/css?family=Rajdhani");
 
 .sidebar {
-    width: 15vw;
-    font-family: 'Rajdhani', sans-serif;
-    border-left: 2px solid black;
-    padding: 1em;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80vh;
+  width: 15vw;
+  font-family: "Rajdhani", sans-serif;
+  border-left: 2px solid black;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
 }
 
 .sidebar button {
-   border-radius: 4px;
-   border: 1px solid black;
-   background: transparent;
-   -webkit-transition: 0.3s;
-   -o-transition: 0.3s;
-   -moz-transition: 0.3s; 
-   transition: 0.3s;
-
+  border-radius: 4px;
+  border: 1px solid black;
+  background: transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .sidebar button:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
-.stock-code{
-    font-weight: bold;
+.stock-code {
+  font-weight: bold;
 }
 
 .sidebar p {
-    margin:0;
+  margin: 0;
 }
 
 .buttonwrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
 
+.stockform {
+  display: flex;
+}
+.stockform input {
+  border-radius: 4px 0 0 4px;
+  border: 1px solid black;
+  width: 15em;
+  height: 2em;
+  font-size: 16px;
+  font-family: "Rajdhani", sans-serif;
+}
+.stockform img {
+  border: 1px solid black;
+  border-radius: 0 4px 4px 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  background-color: white;
+}
+
+.stockform img:hover {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  border: 5px solid white;
 }

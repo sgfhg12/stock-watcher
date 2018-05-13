@@ -25,15 +25,12 @@ class Chart extends React.Component {
   }
 
   renderLines(props) {
-    props.data.sort((a, b) => {
-      return a.length - b.length;
-    });
     return props.data.map(line => {
       return (
         <LineSeries
-          onNearestX={(value, { index }) =>
-            this.setState({ crossHairValues: props.data.map(d => d[index]) })
-          }
+          onNearestX={(value, { index }) => {
+            this.setState({ crossHairValues: props.data.map(d => d[index]) });
+          }}
           data={line}
         />
       );
@@ -41,8 +38,6 @@ class Chart extends React.Component {
   }
 
   render() {
-		console.log("d", this.props.data)
-    console.log(this.state.crossHairValues);
     return (
       <div style={{ width: "80vw", height: "100vh", marginLeft: "1em" }}>
         <FlexibleWidthXYPlot height={500}>
@@ -56,41 +51,42 @@ class Chart extends React.Component {
           />
           <YAxis title="Price" />
           {this.renderLines(this.props)}
-					<Crosshair values={this.state.crossHairValues}>
-					<div 
-					style={{
-						background:'rgba(0,0,0,0.8)',
-						padding:'1em',
-						color: 'white', 
-						borderRadius: '3px'
-					}}>
-            <p>
-              Date:
-              {new Date(
-                this.state.crossHairValues[this.state.crossHairValues.length - 1].x
-              ).getMonth() +
-                1 +
-                "-" +
-                new Date(
-                  this.state.crossHairValues[this.state.crossHairValues.length - 1].x
-                ).getFullYear()}
-            </p>
-            {this.state.crossHairValues.map(
-              (elem, ind) =>
-                elem === undefined ? (
-                  <p key={ind}>No data</p>
-                ) : (
-                  <p key={this.props.stocks[ind].dataset.dataset_code}>
-                    {this.props.stocks[ind] === undefined
-                      ? "No data"
-                      : this.props.stocks[ind].dataset.dataset_code +
-                        ": " +
-                        "$" +
-                        elem.y}
-                  </p>
-                )
-						)}
-						</div>
+          <Crosshair values={this.state.crossHairValues}>
+            <div className="crossbox">
+              <p>
+                Date:
+                {" " +
+                  (
+                    new Date(
+                      this.state.crossHairValues[
+                        this.state.crossHairValues.length - 1
+                      ].x
+                    ).getMonth() +
+                    1 +
+                    "-" +
+                    new Date(
+                      this.state.crossHairValues[
+                        this.state.crossHairValues.length - 1
+                      ].x
+                    ).getFullYear()
+                  ).toString()}
+              </p>
+              {this.state.crossHairValues.map(
+                (elem, ind) =>
+                  elem === undefined ? (
+                    <p key={ind}>No data</p>
+                  ) : (
+                    <p key={ind}>
+                      {this.props.stocks[ind] === undefined
+                        ? "No data"
+                        : this.props.stocks[ind].dataset.dataset_code +
+                          ": " +
+                          "$" +
+                          elem.y}
+                    </p>
+                  )
+              )}
+            </div>
           </Crosshair>
         </FlexibleWidthXYPlot>
       </div>

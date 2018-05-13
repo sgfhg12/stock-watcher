@@ -4,7 +4,7 @@ import './Header.css'
 const Header = () => {
   return (
     <nav className="navbar">
-      <h1>Stock Charts</h1>
+      <h1>Stock Watcher</h1>
     </nav>
   );
 };

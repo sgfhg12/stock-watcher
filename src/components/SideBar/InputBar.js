@@ -1,10 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getStock } from "../../redux/stock";
+import checkMark from './checkmark.png';
 
 export class InputBar extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      value: '',
+    }
 
     this.addStock = this.addStock.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -24,12 +29,13 @@ export class InputBar extends React.Component {
     return (
       <div>
         <form className="stockform" onSubmit={event => this.addStock(event)}>
-          <button onClick={event => this.addStock(event)}>ADD STOCK</button>
           <input
             id="stockCode"
-            type="text"
+            type="text " placeholder= "  Enter stock code..."
             onChange={event => this.handleChange(event)}
+            value={this.state.value}
           />
+          <img src={checkMark} onClick={event => this.addStock(event)}/>
         </form>
       </div>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import InputBar from "./InputBar";
 import StockCard from "./StockCard";
 import { connect } from "react-redux";
-import './SideBar.css'
+import "./SideBar.css";
 
 const SideBar = props => {
   return (

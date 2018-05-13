@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani");
+
+.chart {
+  font-family: "Rajdhani", sans-serif;
+}
+.crossbox {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1em;
+  color: white;
+  border-radius: 3px;
+  width: 6em;
+}
