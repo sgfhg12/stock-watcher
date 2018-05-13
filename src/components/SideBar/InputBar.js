@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { getStock } from "../../redux/stock";
 
-
 export class InputBar extends React.Component {
   constructor(props) {
     super(props);
@@ -24,21 +23,14 @@ export class InputBar extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          <div className="inputform">
-            <form
-              className="stockform"
-              onSubmit={event => this.addStock(event)}
-            >
-              <button onClick={event => this.addStock(event)}>ADD STOCK</button>
-              <input
-                id="stockCode"
-                type="text"
-                onChange={event => this.handleChange(event)}
-              />
-            </form>
-          </div>
-        </ul>
+        <form className="stockform" onSubmit={event => this.addStock(event)}>
+          <button onClick={event => this.addStock(event)}>ADD STOCK</button>
+          <input
+            id="stockCode"
+            type="text"
+            onChange={event => this.handleChange(event)}
+          />
+        </form>
       </div>
     );
   }

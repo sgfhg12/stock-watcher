@@ -10,14 +10,16 @@ export class StockCard extends React.Component {
   render() {
     return (
       <div>
+        
+        <p className="stock-code">{this.props.stock.dataset_code}</p>
+        <p className="buttonwrapper">{this.props.stock.name}
         <button
           onClick={evt =>
             this.props.deleteStock(evt, this.props.stock.dataset_code)
         }>
-          x
+          REMOVE STOCK
         </button>
-        <p>{this.props.stock.dataset_code}</p>
-        <p>{this.props.stock.name}</p>
+        </p>
       </div>
     );
   }

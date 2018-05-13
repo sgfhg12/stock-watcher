@@ -3,3 +3,8 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.app-container {
+    height: 100vh;
+    overflow: hidden;
+}

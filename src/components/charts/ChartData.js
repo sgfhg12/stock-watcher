@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getStock } from "../../redux/stock";
 import Chart from "./Chart";
 
 
@@ -45,4 +44,4 @@ const mapStateToProps = state => ({
   stocks: state.stocks
 });
 
-export default connect(mapStateToProps, { getStock })(ChartData);
+export default connect(mapStateToProps)(ChartData);
