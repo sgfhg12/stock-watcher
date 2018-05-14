@@ -5,9 +5,15 @@ import { connect } from "react-redux";
 import "./SideBar.css";
 
 const SideBar = props => {
+  const error = props.error ? props.error.error : null;
   return (
     <div className="sidebar">
       <div>
+        {error && (
+          <div className="error-box">
+            <p>Invalid Stock Code</p>
+          </div>
+        )}
         {props.stocks.map(stock => <StockCard stock={stock.dataset} />)}
       </div>
       <InputBar />
@@ -16,7 +22,8 @@ const SideBar = props => {
 };
 
 const mapStateToProps = state => ({
-  stocks: state.stocks
+  stocks: state.stocks,
+  error: state.errors
 });
 
 export default connect(mapStateToProps)(SideBar);

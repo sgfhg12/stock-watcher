@@ -65,3 +65,74 @@
   filter: invert(1);
   border: 5px solid white;
 }
+
+.error-box {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  height: 5em;
+  width: 11em;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 4px;
+  -webkit-animation: fadeinout 3s linear forwards;
+  -moz-animation: fadeinout 3s linear forwards;
+  -ms-animation: fadeinout 3s linear forwards;
+  -o-animation: fadeinout 3s linear forwards;
+  animation: fadeinout 3s linear forwards;
+}
+
+.error-box p {
+  padding: 2em 0 2em 0;
+}
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  75%,
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  75%,
+  50% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  75%,
+  50% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  75%,
+  50% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  75%,
+  50% {
+    opacity: 1;
+  }
+}

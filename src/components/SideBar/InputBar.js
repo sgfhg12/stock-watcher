@@ -30,6 +30,7 @@ export class InputBar extends React.Component {
   }
   render() {
     const error = this.props.error ? this.props.error.error : null
+    if (error) this.renderErrorMsg()
     return (
       <div>
         <form className="stockform" onSubmit={event => this.addStock(event)}>
@@ -39,8 +40,6 @@ export class InputBar extends React.Component {
             onChange={event => this.handleChange(event)}
             value={this.state.value}
           />
-          {error && <p>Invalid Stock Code</p>}
-          {error && this.renderErrorMsg()}
           <img src={checkMark} onClick={event => this.addStock(event)}/>
         </form>
       </div>
@@ -53,4 +52,4 @@ const mapStateToProps = state => ({
   error: state.errors
 });
 
-export default connect(mapStateToProps, { getStock,deleteError })(InputBar);
+export default connect(mapStateToProps, { getStock, deleteError })(InputBar);
