@@ -11,3 +11,5 @@ users to enter stock codes and then visualizes the stock data over a period of t
 
 ## Check it out [here!](http://stock-watcher.s3-website.us-east-2.amazonaws.com)
 
+![screenshot](https://github.com/sgfhg12/stock-watcher/blob/master/screenshot.png)
+
