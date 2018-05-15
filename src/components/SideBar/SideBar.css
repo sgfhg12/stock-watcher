@@ -19,6 +19,8 @@
   -o-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
 }
 
 .sidebar button:hover {
@@ -58,12 +60,14 @@
   -moz-transition: 0.3s;
   transition: 0.3s;
   background-color: white;
+  height:34px;
 }
 
 .stockform img:hover {
   -webkit-filter: invert(1);
   filter: invert(1);
   border: 5px solid white;
+  height: 26px;
 }
 
 .error-box {
