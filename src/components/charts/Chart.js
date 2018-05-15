@@ -1,16 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import {
   HorizontalGridLines,
   VerticalGridLines,
   XAxis,
-  XYPlot,
   YAxis,
   LineSeries,
-  Borders,
-  GradientDefs,
-  linearGradient,
-  makeWidthFlexible,
   Crosshair,
   FlexibleWidthXYPlot
 } from "react-vis";
@@ -25,9 +19,9 @@ class Chart extends React.Component {
   }
 
   renderLines(props) {
-    return props.data.map(line => {
+    return props.data.map((line,ind) => {
       return (
-        <LineSeries
+        <LineSeries key={ind}
           onNearestX={(value, { index }) => {
             this.setState({ crossHairValues: props.data.map(d => d[index]) });
           }}
@@ -39,8 +33,8 @@ class Chart extends React.Component {
 
   render() {
     return (
-      <div style={{ width: "80vw", height: "100vh", marginLeft: "1em" }}>
-        <FlexibleWidthXYPlot height={500}>
+      <div className="graph">
+        <FlexibleWidthXYPlot height={550}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis

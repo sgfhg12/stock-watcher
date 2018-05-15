@@ -1,0 +1,23 @@
+.footer {
+  font-size: 27px;
+  display: flex;
+  padding-top: 10px;
+}
+.footer p {
+  margin: 0;
+  padding-left: 1em;
+}
+
+.footer img {
+  height: 33px;
+  width: 33px;
+  margin-left: 1em;
+  background-color: white;
+  border-radius: 50%;
+  border: 1 solid white;
+}
+
+.footer img:hover {
+  transform: translateY(-8px);
+  transition: 0.25s ease-in-out;
+}

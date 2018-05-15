@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const ADD_ERROR = "ADD_ERROR";
 const DELETE_ERROR = "DELETE_ERROR";
 

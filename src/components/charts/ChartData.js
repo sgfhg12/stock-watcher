@@ -4,12 +4,10 @@ import Chart from "./Chart";
 import "./chart.css";
 
 class ChartData extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  
   renderChart(props) {
     if (props.stocks[0] === undefined) {
-      return <div> No Data is Available</div>;
+     return ( <div className="nograph"> No data available <br/> Please enter a stock code </div>)
     } else {
       let data = [];
       let arrayColumn = (arr, n) => arr.map(ele => ele[n]);

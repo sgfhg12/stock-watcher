@@ -14,7 +14,13 @@ const SideBar = props => {
             <p>Invalid Stock Code</p>
           </div>
         )}
-        {props.stocks.map(stock => <StockCard stock={stock.dataset} />)}
+        {!props.stocks.length ? (
+          <p className="nostock">No stocks added </p>
+        ) : (
+          <div className="card-container">
+          {props.stocks.map(stock => <StockCard key={stock.dataset.id}stock={stock.dataset} />)}
+          </div>)
+        }
       </div>
       <InputBar />
     </div>

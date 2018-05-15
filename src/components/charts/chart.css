@@ -10,3 +10,15 @@
   border-radius: 3px;
   width: 6em;
 }
+.graph {
+    width: 80vw;
+    height: 100vh; 
+    margin: 2em 1em 0 1em;
+}
+.nograph {
+    font-size:2em;
+    text-align: center;
+    width:80vw;
+    margin-top: 6em;
+
+}
